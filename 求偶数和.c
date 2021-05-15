@@ -6,14 +6,18 @@
 #include "stdio.h"
 
 int main(){
-    int a;
+    int a, i, s=0;
     scanf("%d",&a);
     int b[a];
-    for (int i = 0; i <= a; i++) {
-        scanf("%d",&a[i]);
+    for (i = 0; i < a; i++) {
+        scanf("%d",&b[i]);
+        if(b[i]%2==0){
+            s=s+b[i];
+        }
+        else{
+            continue;
+        }
     }
-    for(i = 0; i<=a;i++){
-        printf("%d",a[i])
-    }
+    printf("%d",s);
     return 0;
 }
